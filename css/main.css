@@ -152,15 +152,21 @@ z-index: 999; width: 100%; margin-top: 0; border-bottom: solid 1px #ddd; }
 .wear_banner, .w_banner_list, .w_banner_list li { width: 100%; height: 600px; }
 .w_banner_list li { position: absolute; top: 0; left: 0; }
 .w_banner_list li a { display: block; width: 100%; height: 100%; }
-.w_banner01 { background:url(../images/banner-one.jpg) no-repeat center top; }
-.w_banner02 { background: url(../images/banner-two.jpg) no-repeat center top; }
-.w_banner03 { background: url(../images/banner-three.jpg) no-repeat center top; }
+.w_banner01 { background:url(../images/banner1.jpg) no-repeat center top; }
+.w_banner02 { background: url(../images/banner2.jpg) no-repeat center top; }
+.w_banner03 { background: url(../images/banner3.jpg) no-repeat center top; }
+.w_banner04 { background: url(../images/banner4.jpg) no-repeat center top; }
+.w_banner05 { background: url(../images/banner5.jpg) no-repeat center top; }
 .w_banner_list li .check_in { position: absolute; width: 350px; height: 60px; bottom: 150px; left: 50%; margin-left: -175px; background: url(../images/check_in.png) 0 0 no-repeat; z-index: 1; }
 .w_banner_list .w_banner03 a { width: 100%; height: 600px; position: absolute; z-index: 1; left: 0; top: 0; background: url(about:blank); }
 .wear_banner .w1000 { position: absolute; top: 0; left: 50%; margin-left: -500px; height: 600px; }
 .w_font { width: 1000px; position: absolute; top: 110px; }
 .wear_banner .row_list { position: absolute; left: 50%; margin-left: -500px; bottom: 40px; width: 1000px; z-index: 1; }
 .wear_banner .w_date { width: 205px; left: 50%; margin-left: 295px; position: absolute; top: 20px; z-index: 1; }
+.wear_banner .banner-bar{position: absolute;width:1000px; height: 95px;left:50%;bottom:61px;margin-left:-500px; z-index: 1;}
+
+
+
 .row_list { margin-right: -26px; overflow: hidden; zoom: 1; }
 .row_list li { float: left; display: inline; font: bold 16px/24px "Microsoft Yahei", "黑体"; text-align: center; width: 113px; margin: 0 26px; cursor: pointer; }
 .row_list li .row { display: block; width: 113px; height: 113px; margin: 0 auto 8px; }
@@ -177,14 +183,15 @@ z-index: 999; width: 100%; margin-top: 0; border-bottom: solid 1px #ddd; }
 .row_list li .row06 { background: url(../images/ld6.png) no-repeat 0 0; }
 .row_list li .row06:hover {background: url(../images/ld61.png) no-repeat 0 0;}
 .wear_banner .w_date p { font: 14px/24px "Microsoft Yahei", "黑体"; color: #666; }
-.wear_banner .w_date .date_box { width: 205px; height: 30px; background: url(../images/date_bg.png) no-repeat center left; }
-.wear_banner .w_date .date_box span { display: block; float: left; width: 30px; text-align: center; color: #666; font: 16px/30px "Arial", "Microsoft Yahei"; padding-right: 18px; _position: relative; _top: 15px; _left: -3px; }
+.wear_banner .w_date .date_box { width:144px; height: 30px; background: url(../images/date_bg.png) no-repeat center left; }
+.wear_banner .w_date .date_box span { display: block; float: left; width: 30px; text-align: center; color: #fff; font: 16px/30px "Arial", "Microsoft Yahei"; padding-right: 18px; _position: relative; _top: 15px; _left: -3px; }
+
 .main_wrapper, .part1 { width: 100%; }
 .danwei { border-bottom: solid 2px #201f5b; padding: 10px 0; background: #f4f4f4; }
 .danwei ul li { float: left; font: 14px/20px "Microsoft Yahei", "黑体"; }
 .danwei ul li h3 { background: url(../images/ico_dw.png) 0 0 no-repeat; width: 75px; height: 20px; font-weight: normal; padding-left: 6px; color: #fff; float: left; margin-right: 5px; }
 .danwei ul li a { margin: 0 6px; }
-.danwei ul li .media { width: 455px; height: 20px; overflow: hidden; }
+.danwei ul li .media { /*width: 455px; */height: 20px; overflow: hidden; }
 .part1 { position: relative; }
 .w_title { color: #464646; font: 30px/40px "Microsoft Yahei", "黑体"; position: relative; border-bottom: 2px solid #ddd; }
 .mt52 { margin-top: 52px; }
@@ -242,7 +249,7 @@ z-index: 999; width: 100%; margin-top: 0; border-bottom: solid 1px #ddd; }
 .fenbu_left ul { padding-top: 5px; }
 .fenbu_left ul li { float: left; padding: 10px 0 0 50px; width: 240px; _padding: 8px 0 0 50px; }
 .fenbu_left ul li .num { display: inline-block; width: 18px; height: 18px; background: url(../images/ico_row.png) 0 0 no-repeat; line-height: 18px; color: #fff; text-align: center; font-size: 14px; margin-right: 8px; }
-.fenbu_right { background: #ad2305; width: 333px; text-align: center; font-size: 30px; line-height: 80px; _height: 65px; _padding-top: 15px; }
+.fenbu_right { background: #cd0100; width: 333px; text-align: center; font-size: 30px; line-height: 80px; _height: 65px; _padding-top: 15px; }
 .fenbu_right a { display: block; }
 .fenbu_right img { padding-right: 15px; }
 .gray_bg { background: #f7f7f7; padding: 20px 0 50px; font: 16px/30px "Microsoft Yahei", "黑体"; }
@@ -255,13 +262,18 @@ z-index: 999; width: 100%; margin-top: 0; border-bottom: solid 1px #ddd; }
 .contact {  color: #fff; font-family: Microsoft Yahei;}
 .contact li { margin-right: 54px; font-size: 16px; line-height: 30px;margin-bottom:26px;}
 .contact li strong { font-size: 16px; font-weight: normal;color:#fbc100;margin-right:18px;}
-.weixin {width:520px;font-family: Microsoft Yahei;  }
-.weixin ul li { width: 115px; padding: 20px 20px 5px 20px; border: solid 1px #ddd; margin-left: 30px; text-align: center; float: left; _display: inline; }
+.weixin {font-family: Microsoft Yahei;margin-left:185px;}
+.weixin ul{margin-top:33px;}
+.weixin ul li { width: 115px; padding: 20px 20px 5px 20px; border: solid 1px #ddd; margin-right: 30px; text-align: center; float: left; _display: inline; }
 .weixin .surprise{font-size:22px;color:#fff;}
 .weixin .surprise p{font-size:26px;color:#fbc100;}
 .weixin .surprise p strong{font-size:43px; font-style:italic;margin-right:10px;}
 .weixin ul li img { width: 115px; height: 115px; }
 .weixin ul li p { font-size: 16px; color: #fff; margin-top: 3px; }
+.weixin-hd h3{font-size: 20px;color:#fff;margin-right: 22px;}
+.weixin-hd .shao{margin-top:-10px;position: relative;}
+
+
 .btn_qq { position: fixed; z-index: 9999999; right: 0; bottom: 200px; _margin-bottom: 20px; _position: absolute; _bottom: auto; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
 }
 .btn_qq a:hover { text-decoration: none; }

@@ -127,54 +127,6 @@ $(function() {
     });*/
 
 
-
-	//四大展区
-/*$.fn.center = function () {
-    var currH = this.height();
-    var faH = this.parent().height();
-    var top = (faH - currH) / 2;
-    this.css("top", top);
-    return this;
-}
-
-$.fn.moveCenter = function () {
-    var currH = this.height();
-    var faH = this.parent().height();
-    var top = (faH - currH) / 2;
-    this.animate({"top": top}, 500);
-    return this;
-}
-
-$(".jgz-d-list h4").each(function () {
-    $(this).center();
-});
-
-$(".jgz-d-list li").hover(function () {
-
-    var currH = $(this).find("p").outerHeight();
-    var h4h = $(this).find("h4").outerHeight();
-    var faH = $(this).height();
-    var pos = ((faH - currH - h4h) / 2) - 5;
-    var that = $(this).index(".jgz-d-list li");
-
-    $(this).find("h4").stop(true).animate({"top": pos + 4}, 500);
-    $(this).find("p").stop(true).animate({"bottom": pos + 3}, 500);
-    $(this).find(".bg").stop(true).animate({"bottom": 0}, 500);
-    $(this).siblings("li").stop(true).animate({"width":"228px"},500);
-    $(this).stop(true).animate({"width":"314px"},500);
-
-
-}, function () {
-
-    $(this).find("h4").moveCenter();
-    $(this).find("p").stop().animate({"bottom": "-145px"}, 500);
-    $(this).find(".bg").stop().animate({"bottom": "-170px"}, 500);
-
-});*/
-
-
-   
-
     $("#share").hover(function(){
 		$(this).find(".jiathis_style").show();
 	},function(){
@@ -222,7 +174,8 @@ function leftscroll(speed,demo){
 
 function topscroll(speed,demo){
 	//在线研讨会滚动 
-	var speed=speed;
+   if($("#"+demo).length){
+   	var speed=speed;
 	var c2 = demo+'1';
 	var c3 = demo+'2';
 	var scrname=setInterval(Marquee,speed);	
@@ -238,7 +191,8 @@ function topscroll(speed,demo){
 	else{
 	   demo.scrollTop++;
 	}
-	}	
+	}
+   }
 }
 
 		
@@ -271,6 +225,58 @@ $(".cz_list_box li").hover(function() {
     imgTimer = setInterval(imgMarquee, speed);
 
 });
+
+$(function(){
+var wjs = {
+    setCookie: function(name, value, expires) {
+      document.cookie = name + '=' + value + '; path=/; domain=' + document.domain + (expires ? '; expires=' + expires.toGMTString() : '');
+    },
+    getCookie: function(name) {
+      var prefix = name + '=';
+      var start = document.cookie.indexOf(prefix);
+      if (start == -1)
+        return null;
+      var end = document.cookie.indexOf(';', start + prefix.length);
+      if (end == -1)
+        end = document.cookie.length;
+      var value = document.cookie.substring(start + prefix.length, end);
+      value = decodeURIComponent(value)
+      return value;
+    },
+    lefttime: function() {
+      // var endtime = new Date('2015 / 05 /27, 00: 00: 00');
+      var endtime = new Date('2016 / 08 / 30, 09: 00: 00');
+      var nowtime = new Date();
+      var leftsecond = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+      var _d = parseInt(leftsecond / 3600 / 24);
+      var _h = parseInt((leftsecond / 3600) % 24);
+      var _m = parseInt((leftsecond / 60) % 60);
+      var _s = parseInt(leftsecond % 60);
+      var timer;
+	  jQuery(".Date").show();
+	  
+
+      if (leftsecond > 0)
+	  {
+         // jQuery('#lefttime').html('<span>' + _d + '</span><span>' + _h + '</span><span>' + '' + _m + '' + '</span><span>' + '' + _s + '' + '</span><span>');
+         jQuery('#lefttime').html('<span>' + _d + '</span><span>' + _h + '</span><span>' + '' + _m + '' + '</span>');
+      }
+	  else {
+        //wjs.$('lefttime').innerHTML = '<span class="timeout"></span>';
+		
+		jQuery(".Date").hide();
+        jQuery("#btn1").html('<img src="images/btn_sq02.gif" />');
+		jQuery(".banner_right").css("padding-top","26px");
+        clearTimeout(timer);
+      }
+
+      timer = setTimeout(wjs.lefttime, 1000);
+    }
+  };
+
+  wjs.lefttime();
+})
+
 
 
 
